@@ -2,9 +2,17 @@
 
 import { useState } from 'react';
 import { Avatar } from '@/components/ui/Avatar';
+import { useLanguage } from '@/hooks/useLanguage';
 
 export function UserMenu() {
   const [open, setOpen] = useState(false);
+  const { t } = useLanguage();
+
+  const menuItems = [
+    { label: t.userMenu.account, href: '#' },
+    { label: t.userMenu.profile, href: '#' },
+    { label: t.userMenu.settings, href: '#' },
+  ];
 
   return (
     <div className="relative">
@@ -27,11 +35,7 @@ export function UserMenu() {
         <>
           <div className="fixed inset-0 z-10" onClick={() => setOpen(false)} />
           <div className="absolute right-0 top-full mt-1 w-48 bg-[#282828] rounded-md shadow-xl z-20 overflow-hidden text-sm">
-            {[
-              { label: 'Account', href: '#' },
-              { label: 'Profile', href: '#' },
-              { label: 'Settings', href: '#' },
-            ].map(item => (
+            {menuItems.map(item => (
               <a
                 key={item.label}
                 href={item.href}
@@ -42,7 +46,7 @@ export function UserMenu() {
             ))}
             <div className="border-t border-[#3e3e3e]" />
             <button className="w-full text-left px-4 py-3 text-[#ffffffb3] hover:text-white hover:bg-[#3e3e3e] transition-colors cursor-pointer">
-              Log out
+              {t.userMenu.logout}
             </button>
           </div>
         </>

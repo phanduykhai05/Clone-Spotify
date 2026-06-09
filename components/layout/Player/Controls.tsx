@@ -1,18 +1,20 @@
 'use client';
 
 import { usePlayer } from '@/hooks/usePlayer';
+import { useLanguage } from '@/hooks/useLanguage';
 import { Progress } from './Progress';
 import { cn } from '@/lib/utils';
 
 export function Controls() {
   const { isPlaying, isShuffle, repeatMode, togglePlay, skipNext, skipPrev, toggleShuffle, cycleRepeat } = usePlayer();
+  const { t } = useLanguage();
 
   return (
     <div className="flex flex-col items-center gap-2">
       <div className="flex items-center gap-4">
         <button
           onClick={toggleShuffle}
-          aria-label="Toggle shuffle"
+          aria-label={t.player.toggleShuffle}
           className={cn('relative cursor-pointer transition-colors', isShuffle ? 'text-[#1db954]' : 'text-[#a7a7a7] hover:text-white')}
         >
           <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -21,7 +23,7 @@ export function Controls() {
           {isShuffle && <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#1db954] rounded-full" />}
         </button>
 
-        <button onClick={skipPrev} aria-label="Previous" className="text-[#a7a7a7] hover:text-white transition-colors cursor-pointer">
+        <button onClick={skipPrev} aria-label={t.player.previous} className="text-[#a7a7a7] hover:text-white transition-colors cursor-pointer">
           <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
             <path d="M6 6h2v12H6zm3.5 6 8.5 6V6z" />
           </svg>
@@ -29,7 +31,7 @@ export function Controls() {
 
         <button
           onClick={togglePlay}
-          aria-label={isPlaying ? 'Pause' : 'Play'}
+          aria-label={isPlaying ? t.player.pause : t.player.play}
           className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:scale-105 transition-transform cursor-pointer"
         >
           {isPlaying ? (
@@ -38,12 +40,12 @@ export function Controls() {
             </svg>
           ) : (
             <svg className="w-4 h-4 text-black ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z" />
+              <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606" />
             </svg>
           )}
         </button>
 
-        <button onClick={skipNext} aria-label="Next" className="text-[#a7a7a7] hover:text-white transition-colors cursor-pointer">
+        <button onClick={skipNext} aria-label={t.player.next} className="text-[#a7a7a7] hover:text-white transition-colors cursor-pointer">
           <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
             <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
           </svg>
@@ -51,7 +53,7 @@ export function Controls() {
 
         <button
           onClick={cycleRepeat}
-          aria-label="Toggle repeat"
+          aria-label={t.player.toggleRepeat}
           className={cn('relative cursor-pointer transition-colors', repeatMode !== 'off' ? 'text-[#1db954]' : 'text-[#a7a7a7] hover:text-white')}
         >
           {repeatMode === 'track' ? (

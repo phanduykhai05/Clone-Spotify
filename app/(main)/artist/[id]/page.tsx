@@ -1,23 +1,20 @@
 import { ArtistPage } from '@/components/features/Artist';
-import type { Artist, Track, Album } from '@/types/music';
-
-async function getArtistData(id: string): Promise<{
-  artist: Artist;
-  popularTracks: Track[];
-  albums: Album[];
-}> {
-  const artist: Artist = {
-    id,
-    name: 'The Weeknd',
-    imageUrl: '',
-    followers: 35000000,
-    verified: true,
-  };
-  return { artist, popularTracks: [], albums: [] };
-}
+import { getArtist, getArtistTopTracks, getArtistAlbums } from '@/lib/spotify';
+import { notFound } from 'next/navigation';
 
 export default async function Page({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const { artist, popularTracks, albums } = await getArtistData(id);
+
+  let artist, popularTracks, albums;
+  try {
+    [artist, popularTracks, albums] = await Promise.all([
+      getArtist(id),
+      getArtistTopTracks(id),
+      getArtistAlbums(id, 10),
+    ]);
+  } catch {
+    notFound();
+  }
+
   return <ArtistPage artist={artist} popularTracks={popularTracks} albums={albums} />;
 }

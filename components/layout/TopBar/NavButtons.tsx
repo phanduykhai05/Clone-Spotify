@@ -1,15 +1,17 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import { useLanguage } from '@/hooks/useLanguage';
 
 export function NavButtons() {
   const router = useRouter();
+  const { t } = useLanguage();
 
   return (
     <div className="flex items-center gap-2">
       <button
         onClick={() => router.back()}
-        aria-label="Go back"
+        aria-label={t.nav.goBack}
         className="w-8 h-8 flex items-center justify-center bg-black/50 rounded-full text-white hover:bg-black/70 transition-colors cursor-pointer"
       >
         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -18,7 +20,7 @@ export function NavButtons() {
       </button>
       <button
         onClick={() => router.forward()}
-        aria-label="Go forward"
+        aria-label={t.nav.goForward}
         className="w-8 h-8 flex items-center justify-center bg-black/50 rounded-full text-white hover:bg-black/70 transition-colors cursor-pointer"
       >
         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">

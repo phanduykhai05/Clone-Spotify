@@ -58,6 +58,15 @@ body {
   background-clip: content-box;
 }
 
+/* Hide scrollbar for horizontal scroll sections */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 /* Range input reset */
 input[type='range'] {
   -webkit-appearance: none;

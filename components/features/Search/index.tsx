@@ -1,5 +1,6 @@
 import { TopBar } from '@/components/layout/TopBar';
 import { CategoryGrid } from './CategoryGrid';
+import type { Category } from '@/types/music';
 
 function SearchInput() {
   return (
@@ -17,14 +18,18 @@ function SearchInput() {
   );
 }
 
-export function SearchPage() {
+interface SearchPageProps {
+  categories: Category[];
+}
+
+export function SearchPage({ categories }: SearchPageProps) {
   return (
     <>
       <TopBar>
         <SearchInput />
       </TopBar>
       <div className="flex-1 overflow-y-auto px-6 pb-8 space-y-8 pt-2">
-        <CategoryGrid />
+        <CategoryGrid categories={categories} />
       </div>
     </>
   );

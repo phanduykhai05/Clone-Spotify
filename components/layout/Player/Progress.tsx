@@ -1,10 +1,12 @@
 'use client';
 
 import { usePlayer } from '@/hooks/usePlayer';
+import { useLanguage } from '@/hooks/useLanguage';
 import { formatDuration } from '@/lib/utils';
 
 export function Progress() {
   const { currentTrack, progress, seek } = usePlayer();
+  const { t } = useLanguage();
   const durationMs = currentTrack?.durationMs ?? 0;
   const currentMs = durationMs * progress;
 
@@ -30,7 +32,7 @@ export function Progress() {
           value={progress}
           onChange={e => seek(parseFloat(e.target.value))}
           className="absolute inset-0 w-full opacity-0 cursor-pointer"
-          aria-label="Playback progress"
+          aria-label={t.player.progress}
         />
       </div>
       <span className="text-[10px] text-[#a7a7a7] w-9 tabular-nums">

@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { useLanguage } from '@/hooks/useLanguage';
 
 function InstallIcon() {
   return (
@@ -10,45 +13,33 @@ function InstallIcon() {
 }
 
 export function HeaderNav() {
+  const { t } = useLanguage();
+
   return (
     <nav className="flex items-center gap-6 flex-shrink-0">
-      {/* Text links */}
       <Link href="/premium" className="text-sm font-bold text-white hover:text-[#1db954] transition-colors whitespace-nowrap">
-        Premium
+        {t.header.premium}
       </Link>
       <Link href="/support" className="text-sm font-bold text-white hover:text-[#1db954] transition-colors">
-        Support
+        {t.header.support}
       </Link>
       <Link href="/download" className="text-sm font-bold text-white hover:text-[#1db954] transition-colors">
-        Download
+        {t.header.download}
       </Link>
 
-      {/* Vertical divider */}
       <div className="w-px h-5 bg-[#3a3a3a]" />
 
-      {/* Install App */}
-      <Link
-        href="/download"
-        className="flex items-center gap-2 text-sm font-bold text-white hover:text-[#1db954] transition-colors whitespace-nowrap"
-      >
+      <Link href="/download" className="flex items-center gap-2 text-sm font-bold text-white hover:text-[#1db954] transition-colors whitespace-nowrap">
         <InstallIcon />
-        Install App
+        {t.header.installApp}
       </Link>
 
-      {/* Sign up */}
-      <Link
-        href="/signup"
-        className="text-sm font-bold text-[#a7a7a7] hover:text-white transition-colors whitespace-nowrap"
-      >
-        Sign up
+      <Link href="/signup" className="text-sm font-bold text-[#a7a7a7] hover:text-white transition-colors whitespace-nowrap">
+        {t.header.signUp}
       </Link>
 
-      {/* Log in */}
-      <Link
-        href="/login"
-        className="h-12 px-8 rounded-full bg-white text-black text-sm font-bold hover:scale-105 hover:bg-[#f0f0f0] transition-all whitespace-nowrap flex items-center"
-      >
-        Log in
+      <Link href="/login" className="h-12 px-8 rounded-full bg-white text-black text-sm font-bold hover:scale-105 hover:bg-[#f0f0f0] transition-all whitespace-nowrap flex items-center">
+        {t.header.logIn}
       </Link>
     </nav>
   );

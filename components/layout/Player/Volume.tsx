@@ -1,9 +1,11 @@
 'use client';
 
 import { usePlayer } from '@/hooks/usePlayer';
+import { useLanguage } from '@/hooks/useLanguage';
 
 export function Volume() {
   const { volume, isMuted, setVolume, toggleMute } = usePlayer();
+  const { t } = useLanguage();
   const displayVolume = isMuted ? 0 : volume;
 
   const VolumeIcon = () => {
@@ -32,7 +34,7 @@ export function Volume() {
     <div className="flex items-center gap-2 w-[30%] justify-end">
       <button
         onClick={toggleMute}
-        aria-label={isMuted ? 'Unmute' : 'Mute'}
+        aria-label={isMuted ? t.player.unmute : t.player.mute}
         className="text-[#a7a7a7] hover:text-white transition-colors cursor-pointer"
       >
         <VolumeIcon />
@@ -54,7 +56,7 @@ export function Volume() {
           value={displayVolume}
           onChange={e => setVolume(parseFloat(e.target.value))}
           className="absolute inset-0 w-full opacity-0 cursor-pointer"
-          aria-label="Volume"
+          aria-label={t.player.volume}
         />
       </div>
     </div>

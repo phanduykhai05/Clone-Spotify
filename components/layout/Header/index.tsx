@@ -1,5 +1,6 @@
 import { SearchBar } from './SearchBar';
 import { HeaderNav } from './HeaderNav';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 function SpotifyLogo() {
   return (
@@ -16,7 +17,10 @@ export function Header() {
     <header className="flex items-center justify-between px-4 h-16 bg-black flex-shrink-0 z-20">
       <SpotifyLogo />
       <SearchBar />
-      <HeaderNav />
+      <div className="flex items-center gap-2">
+        <LanguageSwitcher />
+        <HeaderNav />
+      </div>
     </header>
   );
 }

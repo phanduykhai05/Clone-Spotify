@@ -1,0 +1,126 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "search": "Tìm kiếm",
+    "goBack": "Quay lại",
+    "goForward": "Tiến"
+  },
+  "userMenu": {
+    "account": "Tài khoản",
+    "profile": "Hồ sơ",
+    "settings": "Cài đặt",
+    "logout": "Đăng xuất"
+  },
+  "library": {
+    "title": "Thư viện",
+    "create": "Tạo danh sách phát hoặc thư mục",
+    "filters": {
+      "playlist": "Danh sách phát",
+      "podcast": "Podcast & Chương trình",
+      "album": "Album",
+      "artist": "Nghệ sĩ"
+    }
+  },
+  "header": {
+    "premium": "Premium",
+    "support": "Hỗ trợ",
+    "download": "Tải xuống",
+    "installApp": "Cài ứng dụng",
+    "signUp": "Đăng ký",
+    "logIn": "Đăng nhập"
+  },
+  "search": {
+    "placeholder": "Bạn muốn nghe gì?",
+    "browseAll": "Duyệt tất cả"
+  },
+  "home": {
+    "goodMorning": "Chào buổi sáng",
+    "goodAfternoon": "Chào buổi chiều",
+    "goodEvening": "Chào buổi tối",
+    "recentlyPlayed": "Đã nghe gần đây",
+    "recommendedToday": "Đề xuất cho hôm nay",
+    "showAll": "Xem tất cả",
+    "trendingSongs": "Bài hát thịnh hành",
+    "popularArtists": "Nghệ sĩ phổ biến",
+    "popularAlbums": "Album và đĩa đơn phổ biến",
+    "featuredPlaylists": "Playlist nổi bật",
+    "featuredCharts": "Bảng xếp hạng nổi bật",
+    "artist": "Nghệ sĩ",
+    "weeklyMusicCharts": "Bảng xếp hạng nhạc tuần",
+    "weeklyChartDesc": "Cập nhật hàng tuần những bài hát được nghe nhiều nhất...",
+    "dailyChartDesc": "Cập nhật hàng ngày những bài hát được nghe nhiều nhất..."
+  },
+  "player": {
+    "play": "Phát",
+    "pause": "Tạm dừng",
+    "next": "Bài tiếp theo",
+    "previous": "Bài trước",
+    "shuffle": "Phát ngẫu nhiên",
+    "toggleShuffle": "Bật/tắt phát ngẫu nhiên",
+    "repeat": "Lặp lại",
+    "toggleRepeat": "Bật/tắt lặp lại",
+    "mute": "Tắt tiếng",
+    "unmute": "Bật tiếng",
+    "saveToLibrary": "Lưu vào thư viện",
+    "volume": "Âm lượng",
+    "progress": "Tiến trình phát"
+  },
+  "trackList": {
+    "number": "#",
+    "title": "Tiêu đề",
+    "album": "Album",
+    "dateAdded": "Ngày thêm"
+  },
+  "album": {
+    "play": "Phát",
+    "save": "Lưu vào thư viện",
+    "more": "Thêm tùy chọn"
+  },
+  "artist": {
+    "verified": "Nghệ sĩ được xác minh",
+    "follow": "Theo dõi",
+    "following": "Đang theo dõi",
+    "popular": "Phổ biến",
+    "discography": "Danh sách đĩa",
+    "showAll": "Xem tất cả",
+    "followers": "người theo dõi"
+  },
+  "playlist": {
+    "type": "Danh sách phát",
+    "likes": "lượt thích",
+    "songs": "bài hát",
+    "save": "Lưu danh sách phát",
+    "play": "Phát"
+  },
+  "auth": {
+    "signupTitle": "Đăng ký để bắt đầu nghe",
+    "emailLabel": "Địa chỉ email",
+    "emailPlaceholder": "name@domain.com",
+    "next": "Tiếp theo",
+    "or": "hoặc",
+    "signupWithPhone": "Đăng ký bằng số điện thoại",
+    "signupWithGoogle": "Đăng ký bằng Google",
+    "signupWithApple": "Đăng ký bằng Apple",
+    "alreadyHaveAccount": "Bạn đã có tài khoản?",
+    "loginTitle": "Đăng nhập vào Spotify",
+    "continueWithGoogle": "Tiếp tục với Google",
+    "continueWithFacebook": "Tiếp tục với Facebook",
+    "continueWithApple": "Tiếp tục với Apple",
+    "emailOrUsername": "Email hoặc tên người dùng",
+    "password": "Mật khẩu",
+    "showPassword": "Hiện mật khẩu",
+    "hidePassword": "Ẩn mật khẩu",
+    "logIn": "Đăng nhập",
+    "forgotPassword": "Quên mật khẩu?",
+    "dontHaveAccount": "Chưa có tài khoản?",
+    "signUpForSpotify": "Đăng ký Spotify",
+    "reCaptchaText": "Trang này được bảo vệ bởi reCAPTCHA và Google",
+    "privacyPolicy": "Chính sách quyền riêng tư",
+    "termsOfService": "Điều khoản dịch vụ",
+    "apply": "áp dụng."
+  },
+  "language": {
+    "vi": "Tiếng Việt",
+    "en": "English"
+  }
+}
