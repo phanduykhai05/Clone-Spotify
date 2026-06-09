@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  --sp-black: #000000;
+  --sp-dark: #121212;
+  --sp-surface: #181818;
+  --sp-highlight: #282828;
+  --sp-green: #1db954;
+  --sp-green-hover: #1ed760;
+  --sp-text: #ffffff;
+  --sp-text-subdued: #a7a7a7;
+  --sp-text-faint: #6a6a6a;
+}
+
+@theme inline {
+  --font-sans: 'Circular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--sp-black);
+  color: var(--sp-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+  background-clip: content-box;
+}
+
+/* Range input reset */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+}
