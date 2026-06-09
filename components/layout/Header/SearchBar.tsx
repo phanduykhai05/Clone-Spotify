@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { useLanguage } from '@/hooks/useLanguage';
 import { cn } from '@/lib/utils';
 
 function HomeIcon() {
@@ -32,6 +33,7 @@ function BrowseIcon() {
 export function SearchBar() {
   const pathname = usePathname();
   const router = useRouter();
+  const { t } = useLanguage();
   const [query, setQuery] = useState('');
   const isHome = pathname === '/';
 
@@ -42,10 +44,9 @@ export function SearchBar() {
 
   return (
     <div className="flex items-center gap-2">
-      {/* Home button */}
       <Link
         href="/"
-        aria-label="Home"
+        aria-label={t.nav.home}
         className={cn(
           'w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 transition-colors',
           isHome
@@ -56,7 +57,6 @@ export function SearchBar() {
         <HomeIcon />
       </Link>
 
-      {/* Search bar */}
       <form
         onSubmit={handleSearch}
         className="flex items-center bg-[#1a1a1a] hover:bg-[#2a2a2a] focus-within:bg-[#2a2a2a] rounded-full h-12 px-4 gap-3 w-[440px] transition-colors"
@@ -66,16 +66,12 @@ export function SearchBar() {
           type="search"
           value={query}
           onChange={e => setQuery(e.target.value)}
-          placeholder="What do you want to play?"
+          placeholder={t.search.placeholder}
           autoComplete="off"
           className="flex-1 bg-transparent text-white placeholder:text-[#a7a7a7] text-sm outline-none border-none"
         />
         <div className="w-px h-6 bg-[#3a3a3a]" />
-        <Link
-          href="/search"
-          aria-label="Browse"
-          className="text-[#a7a7a7] hover:text-white transition-colors"
-        >
+        <Link href="/search" aria-label={t.search.browseAll} className="text-[#a7a7a7] hover:text-white transition-colors">
           <BrowseIcon />
         </Link>
       </form>

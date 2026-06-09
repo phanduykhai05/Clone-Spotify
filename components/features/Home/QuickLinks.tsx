@@ -2,15 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { LibraryItem } from '@/types/music';
 
-const MOCK_QUICK_LINKS: LibraryItem[] = [
-  { id: '1', type: 'playlist', name: 'Liked Songs', subtitle: '', imageUrl: '' },
-  { id: '2', type: 'playlist', name: 'Daily Mix 1', subtitle: '', imageUrl: '' },
-  { id: '3', type: 'playlist', name: 'Release Radar', subtitle: '', imageUrl: '' },
-  { id: '4', type: 'playlist', name: 'Discover Weekly', subtitle: '', imageUrl: '' },
-  { id: '5', type: 'album', name: 'After Hours', subtitle: '', imageUrl: '' },
-  { id: '6', type: 'playlist', name: 'Top Hits 2024', subtitle: '', imageUrl: '' },
-];
-
 const TYPE_HREF: Record<LibraryItem['type'], string> = {
   playlist: '/playlist',
   album: '/album',
@@ -18,10 +9,16 @@ const TYPE_HREF: Record<LibraryItem['type'], string> = {
   podcast: '/show',
 };
 
-export function QuickLinks() {
+interface QuickLinksProps {
+  items: Pick<LibraryItem, 'id' | 'type' | 'name' | 'imageUrl'>[];
+}
+
+export function QuickLinks({ items }: QuickLinksProps) {
+  if (items.length === 0) return null;
+
   return (
     <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
-      {MOCK_QUICK_LINKS.map(item => (
+      {items.map(item => (
         <Link
           key={item.id}
           href={`${TYPE_HREF[item.type]}/${item.id}`}

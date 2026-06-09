@@ -1,0 +1,126 @@
+{
+  "nav": {
+    "home": "Home",
+    "search": "Search",
+    "goBack": "Go back",
+    "goForward": "Go forward"
+  },
+  "userMenu": {
+    "account": "Account",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Log out"
+  },
+  "library": {
+    "title": "Your Library",
+    "create": "Create playlist or folder",
+    "filters": {
+      "playlist": "Playlists",
+      "podcast": "Podcasts & Shows",
+      "album": "Albums",
+      "artist": "Artists"
+    }
+  },
+  "header": {
+    "premium": "Premium",
+    "support": "Support",
+    "download": "Download",
+    "installApp": "Install App",
+    "signUp": "Sign up",
+    "logIn": "Log in"
+  },
+  "search": {
+    "placeholder": "What do you want to play?",
+    "browseAll": "Browse all"
+  },
+  "home": {
+    "goodMorning": "Good morning",
+    "goodAfternoon": "Good afternoon",
+    "goodEvening": "Good evening",
+    "recentlyPlayed": "Recently played",
+    "recommendedToday": "Recommended for today",
+    "showAll": "Show all",
+    "trendingSongs": "Trending songs",
+    "popularArtists": "Popular artists",
+    "popularAlbums": "Popular albums and singles",
+    "featuredPlaylists": "Featured playlists",
+    "featuredCharts": "Featured Charts",
+    "artist": "Artist",
+    "weeklyMusicCharts": "Weekly Music Charts",
+    "weeklyChartDesc": "Your weekly update of the most played tracks...",
+    "dailyChartDesc": "Your daily update of the most played tracks right now..."
+  },
+  "player": {
+    "play": "Play",
+    "pause": "Pause",
+    "next": "Next track",
+    "previous": "Previous track",
+    "shuffle": "Shuffle",
+    "toggleShuffle": "Toggle shuffle",
+    "repeat": "Repeat",
+    "toggleRepeat": "Toggle repeat",
+    "mute": "Mute",
+    "unmute": "Unmute",
+    "saveToLibrary": "Save to library",
+    "volume": "Volume",
+    "progress": "Change progress"
+  },
+  "trackList": {
+    "number": "#",
+    "title": "Title",
+    "album": "Album",
+    "dateAdded": "Date added"
+  },
+  "album": {
+    "play": "Play",
+    "save": "Save to library",
+    "more": "More options"
+  },
+  "artist": {
+    "verified": "Verified Artist",
+    "follow": "Follow",
+    "following": "Following",
+    "popular": "Popular",
+    "discography": "Discography",
+    "showAll": "Show all",
+    "followers": "followers"
+  },
+  "playlist": {
+    "type": "Playlist",
+    "likes": "likes",
+    "songs": "songs",
+    "save": "Save playlist",
+    "play": "Play"
+  },
+  "auth": {
+    "signupTitle": "Sign up to start listening",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "name@domain.com",
+    "next": "Next",
+    "or": "or",
+    "signupWithPhone": "Sign up with phone number",
+    "signupWithGoogle": "Sign up with Google",
+    "signupWithApple": "Sign up with Apple",
+    "alreadyHaveAccount": "Already have an account?",
+    "loginTitle": "Log in to Spotify",
+    "continueWithGoogle": "Continue with Google",
+    "continueWithFacebook": "Continue with Facebook",
+    "continueWithApple": "Continue with Apple",
+    "emailOrUsername": "Email or username",
+    "password": "Password",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "logIn": "Log In",
+    "forgotPassword": "Forgot your password?",
+    "dontHaveAccount": "Don't have an account?",
+    "signUpForSpotify": "Sign up for Spotify",
+    "reCaptchaText": "This site is protected by reCAPTCHA and the Google",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "apply": "apply."
+  },
+  "language": {
+    "vi": "Tiếng Việt",
+    "en": "English"
+  }
+}

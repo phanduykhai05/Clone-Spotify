@@ -2,23 +2,14 @@
 
 import Link from 'next/link';
 import { useLanguage } from '@/hooks/useLanguage';
-import { SectionCard } from './SectionCard';
 
-interface SectionItem {
-  id: string;
-  type: 'album' | 'playlist' | 'artist';
-  name: string;
-  subtitle?: string;
-  coverUrl?: string;
-}
-
-interface SectionProps {
+interface HScrollSectionProps {
   title: string;
-  items: SectionItem[];
   href?: string;
+  children: React.ReactNode;
 }
 
-export function Section({ title, items, href }: SectionProps) {
+export function HScrollSection({ title, href, children }: HScrollSectionProps) {
   const { t } = useLanguage();
 
   return (
@@ -31,10 +22,8 @@ export function Section({ title, items, href }: SectionProps) {
           </Link>
         )}
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-        {items.slice(0, 6).map(item => (
-          <SectionCard key={item.id} {...item} />
-        ))}
+      <div className="flex gap-4 overflow-x-auto pb-3 scrollbar-hide snap-x">
+        {children}
       </div>
     </section>
   );

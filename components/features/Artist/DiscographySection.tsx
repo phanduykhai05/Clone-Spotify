@@ -1,3 +1,6 @@
+'use client';
+
+import { useLanguage } from '@/hooks/useLanguage';
 import { Card } from '@/components/ui/Card';
 import type { Album } from '@/types/music';
 
@@ -6,12 +9,14 @@ interface DiscographySectionProps {
 }
 
 export function DiscographySection({ albums }: DiscographySectionProps) {
+  const { t } = useLanguage();
+
   return (
     <section className="px-6">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-xl font-bold text-white">Discography</h2>
+        <h2 className="text-xl font-bold text-white">{t.artist.discography}</h2>
         <button className="text-sm font-bold text-[#a7a7a7] hover:text-white transition-colors cursor-pointer">
-          Show all
+          {t.artist.showAll}
         </button>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
